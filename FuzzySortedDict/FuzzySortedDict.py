@@ -47,7 +47,7 @@ class FuzzySortedDict(blist.sorteddict):
                 the dictionary is empty, or there is not a valid key based
                 on the rounding mode.
         """
-        key_list = self.keys()
+        key_list = list(self.keys())
 
         index = bisect.bisect_left(key_list, request)
 
